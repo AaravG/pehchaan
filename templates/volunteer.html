@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="form-container">
+
+<h1>Become a Volunteer</h1>
+
+<form method="POST">
+
+<div class="input-group">
+<label>Name</label>
+<input type="text" name="name" required>
+</div>
+
+<div class="input-group">
+<label>Email</label>
+<input type="email" name="email" required>
+</div>
+
+<div class="input-group">
+<label>Phone</label>
+<input type="tel" name="phone" required>
+</div>
+
+<div class="input-group">
+<label>Skills</label>
+<textarea name="skills" required></textarea>
+</div>
+
+<button class="submit-btn">Join Pehchaan</button>
+
+</form>
+
+</div>
+
+{% endblock %}

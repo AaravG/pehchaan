@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Pehchaan NGO</title>
+
+<link rel="stylesheet" href="/static/css/style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Oi&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+    AOS.init({
+        duration:1000,
+        once:true
+    });
+});
+</script>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="/static/js/map.js"></script>
+
+<body>
+
+<nav class="navbar">
+
+<div class="logo-area">
+<img src="/static/images/logo.png">
+<span>Pehchaan</span>
+</div>
+
+<div class="nav-links">
+<a href="/">Home</a>
+<a href="/about">About</a>
+<a href="/adopt">Adopt</a>
+<a href="/report">Report Stray</a>
+<a href="/volunteer" class="nav-btn">Volunteer</a>
+</div>
+
+</nav>
+
+{% block content %}
+{% endblock %}
+
+<footer class="footer">
+
+<p>© 2026 Pehchaan – Behzubaan ki Pehchaan</p>
+
+</footer>
+
+</body>
+</html>

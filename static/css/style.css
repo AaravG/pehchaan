@@ -1,0 +1,403 @@
+body{
+
+font-family:'Poppins',sans-serif;
+margin:0;
+background:#f4f6f4;
+color:#2f3e34;
+
+}
+
+
+/* NAVBAR */
+
+.navbar{
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 80px;
+background:white;
+box-shadow:0 2px 10px rgba(0,0,0,0.05);
+
+}
+
+.logo-area{
+
+display:flex;
+align-items:center;
+font-weight:600;
+font-size:20px;
+
+}
+
+.logo-area img{
+
+height:45px;
+margin-right:10px;
+
+}
+
+.nav-links a{
+
+margin-left:25px;
+text-decoration:none;
+color:#2f3e34;
+font-weight:500;
+
+}
+
+.nav-btn{
+
+background:#6f8a76;
+color:white;
+padding:8px 16px;
+border-radius:6px;
+
+}
+
+
+/* HERO */
+
+.hero{
+
+height:75vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+
+background:linear-gradient(
+rgba(0,0,0,0.3),
+rgba(0,0,0,0.3)
+),
+url("https://images.unsplash.com/photo-1518717758536-85ae29035b6d");
+
+background-size:cover;
+color:white;
+
+}
+
+.hero-text{
+
+max-width:600px;
+
+}
+
+.hero h1{
+
+font-size:48px;
+margin-bottom:15px;
+
+}
+
+.hero p{
+
+font-size:18px;
+margin-bottom:30px;
+
+}
+
+
+/* BUTTONS */
+
+.btn-primary{
+
+background:#6f8a76;
+color:white;
+padding:14px 26px;
+border-radius:8px;
+text-decoration:none;
+margin-right:10px;
+
+}
+
+.btn-secondary{
+
+background:white;
+color:#2f3e34;
+padding:14px 26px;
+border-radius:8px;
+text-decoration:none;
+
+}
+
+
+/* IMPACT */
+
+.impact{
+
+padding:80px;
+text-align:center;
+
+}
+
+.impact-grid{
+
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:30px;
+margin-top:40px;
+
+}
+
+.impact-card{
+
+background:white;
+padding:30px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.05);
+
+}
+
+
+/* CTA */
+
+.cta{
+
+background:#6f8a76;
+color:white;
+padding:80px;
+text-align:center;
+
+}
+
+
+/* FOOTER */
+
+.footer{
+
+background:#2f3e34;
+color:white;
+text-align:center;
+padding:25px;
+
+}
+
+
+/* .hero h1{
+font-family:'Oi',cursive;
+font-size:72px;
+letter-spacing:2px;
+} */
+
+
+
+.adopt-page{
+
+padding:80px;
+text-align:center;
+
+}
+
+.dog-grid{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+margin-top:40px;
+
+}
+
+.dog-card{
+
+background:white;
+border-radius:12px;
+overflow:hidden;
+box-shadow:0 10px 20px rgba(0,0,0,0.1);
+transition:transform .3s;
+
+}
+
+.dog-card:hover{
+
+transform:translateY(-8px);
+
+}
+
+.dog-card img{
+
+width:100%;
+height:200px;
+object-fit:cover;
+
+}
+
+.dog-info{
+
+padding:20px;
+
+}
+
+
+.stats{
+
+display:flex;
+justify-content:center;
+gap:80px;
+padding:80px;
+background:white;
+
+}
+
+.stat h2{
+
+font-size:50px;
+color:#6f8a76;
+
+}
+
+#map{
+
+height:400px;
+width:100%;
+margin-bottom:20px;
+
+}
+
+
+.dashboard-grid{
+
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:30px;
+padding:40px;
+
+}
+
+.dashboard-card{
+
+background:white;
+padding:30px;
+border-radius:10px;
+box-shadow:0 10px 20px rgba(0,0,0,0.1);
+
+}
+
+.hero{
+
+background-attachment:fixed;
+
+}
+
+
+/* FORM CONTAINER */
+
+.form-container{
+max-width:600px;
+margin:60px auto;
+background:white;
+padding:40px;
+border-radius:12px;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* FORM TITLE */
+
+.form-container h1{
+text-align:center;
+margin-bottom:30px;
+}
+
+/* INPUT GROUP */
+
+.input-group{
+margin-bottom:20px;
+display:flex;
+flex-direction:column;
+}
+
+/* LABEL */
+
+.input-group label{
+font-weight:500;
+margin-bottom:6px;
+}
+
+/* INPUTS */
+
+input, textarea, select{
+
+padding:12px;
+border-radius:6px;
+border:1px solid #ddd;
+font-size:15px;
+font-family:'Poppins',sans-serif;
+
+}
+
+/* TEXTAREA */
+
+textarea{
+min-height:120px;
+resize:vertical;
+}
+
+/* BUTTON */
+
+.submit-btn{
+
+background:#6F8A76;
+color:white;
+padding:14px;
+border:none;
+border-radius:8px;
+font-size:16px;
+cursor:pointer;
+width:100%;
+
+}
+
+.submit-btn:hover{
+background:#5b7260;
+}
+
+
+#map{
+height:400px;
+width:100%;
+border-radius:10px;
+margin-top:15px;
+}
+
+
+input:invalid,
+textarea:invalid {
+
+border:2px solid #ff6b6b;
+
+}
+
+input:valid,
+textarea:valid {
+
+border:2px solid #6F8A76;
+
+}
+
+
+
+.dashboard {
+display:grid;
+grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+gap:20px;
+margin-top:30px;
+}
+
+.card {
+background:white;
+padding:25px;
+border-radius:15px;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+transition:0.3s;
+}
+
+.card:hover {
+transform:translateY(-5px);
+}
+
+.card a {
+display:inline-block;
+margin-top:10px;
+color:#6F8A76;
+font-weight:bold;
+}

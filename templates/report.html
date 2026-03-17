@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="form-container">
+
+<h1>Report a Stray Animal</h1>
+
+<form method="POST">
+
+<div class="input-group">
+<label>Your Name</label>
+<input type="text" name="name" required>
+</div>
+
+<div class="input-group">
+<label>Phone Number</label>
+<input type="text" name="phone" required>
+</div>
+
+<div class="input-group">
+<label>Description</label>
+<textarea name="description"></textarea>
+</div>
+
+<div class="input-group">
+<label>Location</label>
+<input type="text" name="location">
+</div>
+
+<div class="input-group">
+<label>Map Location</label>
+</div>
+<div id="map"></div>
+
+<input type="hidden" id="lat" name="lat">
+<input type="hidden" id="lng" name="lng">
+
+<button class="submit-btn">Submit Report</button>
+
+</form>
+
+</div>
+{% endblock %}
