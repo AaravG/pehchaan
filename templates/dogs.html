@@ -1,0 +1,22 @@
+<h2>Dogs</h2>
+
+<a href="/admin/add-dog" class="btn btn-primary mb-3">Add Dog</a>
+
+<table class="table table-bordered">
+<tr>
+<th>Name</th>
+<th>Age</th>
+<th>Vaccinated</th>
+<th>Status</th>
+</tr>
+
+{% for dog in dogs %}
+<tr>
+<td>{{ dog.name }}</td>
+<td>{{ dog.age }}</td>
+<td>{{ dog.vaccinated }}</td>
+<td>{{ dog.status }}</td>
+</tr>
+{% endfor %}
+
+</table>

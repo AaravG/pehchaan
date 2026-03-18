@@ -1,0 +1,28 @@
+<h2>Volunteers</h2>
+
+<table class="table table-hover">
+<tr>
+<th>Name</th>
+<th>Email</th>
+<th>Phone</th>
+<th>Skills</th>
+<th>Status</th>
+</tr>
+
+{% for v in volunteers %}
+<tr>
+<td>{{ v.name }}</td>
+<td>{{ v.email }}</td>
+<td>{{ v.phone }}</td>
+<td>{{ v.skills }}</td>
+<td>
+{% if v.approved == 1 %}
+Approved
+{% else %}
+<a href="/admin/approve/{{ v.id }}" class="btn btn-success btn-sm">Approve</a>
+{% endif %}
+</td>
+</tr>
+{% endfor %}
+
+</table>

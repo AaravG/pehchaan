@@ -47,6 +47,15 @@ def init_db():
         status TEXT
     )
     """)
+    
+    cur.execute("""
+    CREATE TABLE IF NOT EXISTS adoptions (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        name TEXT,
+        email TEXT,
+        dog_id INTEGER
+    )
+    """)
 
     conn.commit()
     conn.close()
@@ -157,7 +166,11 @@ def admin_reports():
     if not session.get("admin"):
         return redirect("/admin")
 
-    return render_template("rescue_reports.html")
+    conn = get_db()
+    reports = conn.execute("SELECT * FROM reports").fetchall()
+    conn.close()
+
+    return render_template("rescue_reports.html", reports=reports)
 
 @app.route("/admin/dogs")
 def admin_dogs():
@@ -165,7 +178,11 @@ def admin_dogs():
     if not session.get("admin"):
         return redirect("/admin")
 
-    return render_template("dogs.html")
+    conn = get_db()
+    dogs = conn.execute("SELECT * FROM dogs").fetchall()
+    conn.close()
+
+    return render_template("dogs.html", dogs=dogs)
 
 @app.route("/admin/adoptions")
 def admin_adoptions():
@@ -173,7 +190,11 @@ def admin_adoptions():
     if not session.get("admin"):
         return redirect("/admin")
 
-    return render_template("adoptions.html")
+    conn = get_db()
+    adoptions = conn.execute("SELECT * FROM adoptions").fetchall()
+    conn.close()
+
+    return render_template("adoptions.html", adoptions=adoptions)
 
 @app.route("/admin/volunteers")
 def admin_volunteers():
@@ -186,6 +207,19 @@ def admin_volunteers():
     conn.close()
 
     return render_template("volunteers.html", volunteers=volunteers)
+
+@app.route("/admin/approve/<int:id>")
+def approve_volunteer(id):
+
+    if not session.get("admin"):
+        return redirect("/admin")
+
+    conn = get_db()
+    conn.execute("UPDATE volunteers SET approved = 1 WHERE id = ?", (id,))
+    conn.commit()
+    conn.close()
+
+    return redirect("/admin/volunteers")
 
 @app.route("/health")
 def health():

@@ -1,0 +1,18 @@
+<h2>Rescue Reports</h2>
+
+<table class="table table-striped">
+<tr>
+<th>ID</th>
+<th>Description</th>
+<th>Location</th>
+</tr>
+
+{% for report in reports %}
+<tr>
+<td>{{ report.id }}</td>
+<td>{{ report.description }}</td>
+<td>{{ report.lat }}, {{ report.lng }}</td>
+</tr>
+{% endfor %}
+
+</table>

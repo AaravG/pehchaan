@@ -1,0 +1,18 @@
+<h2>Adoption Requests</h2>
+
+<table class="table">
+<tr>
+<th>Name</th>
+<th>Email</th>
+<th>Dog ID</th>
+</tr>
+
+{% for a in adoptions %}
+<tr>
+<td>{{ a.name }}</td>
+<td>{{ a.email }}</td>
+<td>{{ a.dog_id }}</td>
+</tr>
+{% endfor %}
+
+</table>
